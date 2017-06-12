@@ -1,5 +1,8 @@
 import subprocess
 
+# runs windows shell command to force teamviewer to close
+subprocess.call('Taskkill /IM TeamViewer.exe /F')
+
 # runs windows shell command to open task manager and change priority for .exe file to high
 subprocess.call('wmic process where name="Overwatch.exe" CALL setpriority 128', shell=True)
 
